@@ -1,0 +1,35 @@
+﻿@model List<Question>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<h2 class="jumbotron text-center">Frequently Asked Questions</h2>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" asp-controller="Home" asp-action="List" asp-route-id="All">All FAQs</a>
+        </div>
+        <div class="nav navbar-nav">
+                <a asp-controller="FAQ" asp-action="List" asp-route-id="Religion">Religion</a>
+                <a asp-controller="FAQ" asp-action="List" asp-route-id="Characters">Characters</a>
+                <a asp-controller="FAQ" asp-action="List" asp-route-id="Location">Location</a>
+                <a asp-controller="FAQ" asp-action="List" asp-route-id="Faction">Faction</a>
+        </div>
+    </div>
+</nav>
+    <div class="list-group">
+            <a asp-controller="FAQ" asp-action="List" asp-route-id="General" class="list-group-item active">General</a>
+            <a asp-controller="FAQ" asp-action="List" asp-route-id="History" class="list-group-item active">History</a>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr><th>Category</th>
+            <th>Topic</th>
+            <th>Question</th></tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
